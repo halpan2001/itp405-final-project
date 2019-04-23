@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="text-center shadow p-3 mb-5 bg-white rounded p-5" >
-    <h2>Create Comission</h2>
+    <h2>Create Commission</h2>
     <form class="text-left">
 
       <div class="form-group">

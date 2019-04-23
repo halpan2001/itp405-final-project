@@ -13,7 +13,7 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Make the view comission page (start routing with {id}) - get spaces for the info
+      Make the view commission page (start routing with {id}) - get spaces for the info
     </li>
     <li>
       Make edit user info page( route with {id})
@@ -25,7 +25,7 @@
       Refine preview boxes
     </li>
     <li>
-      Add tags to comissions?
+      Add tags to commissions?
     </li>
     <li>
       Better name

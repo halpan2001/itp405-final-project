@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', 'ComissionController@home');
-Route::get('/comission/create', 'ComissionController@create');
-Route::get('/comission/{id}', 'ComissionController@index');
-Route::get('/comission/{id}/edit', 'ComissionController@edit');
-Route::get('/profile', 'ComissionController@profile');
+Route::get('/', 'CommissionController@home');
+Route::get('/commission/create', 'CommissionController@create');
+Route::get('/commission/{id}', 'CommissionController@index');
+Route::get('/commission/{id}/edit', 'CommissionController@edit');
+Route::get('/profile', 'CommissionController@profile');
 
 Route::get('/login', 'LoginController@index');
 Route::get('/signup', 'SignUpController@index');

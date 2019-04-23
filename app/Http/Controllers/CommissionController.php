@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ComissionController extends Controller
+class CommissionController extends Controller
 {
   public function home()
   {
@@ -13,17 +13,17 @@ class ComissionController extends Controller
 
   public function index($genreId=null)
   {
-    return view('comissions.index');
+    return view('commissions.index');
   }
 
   public function create()
   {
-    return view('comissions.create');
+    return view('commissions.create');
   }
 
   public function edit($genreId=null)
   {
-    return view('comissions.edit');
+    return view('commissions.edit');
   }
 
   public function profile()
