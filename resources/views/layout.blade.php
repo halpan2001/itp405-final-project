@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Open Commissions</a>
+          <a class="nav-link" href="/">Commissions</a>
         </li>
         <!-- DROPDOWN (Level 2) -->
         <!-- <li class="nav-item dropdown">

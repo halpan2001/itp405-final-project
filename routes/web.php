@@ -11,22 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'ComissionController@home');
+Route::get('/comission/create', 'ComissionController@create');
+Route::get('/comission/{id}', 'ComissionController@index');
+Route::get('/comission/{id}/edit', 'ComissionController@edit');
+Route::get('/profile', 'ComissionController@profile');
 
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::get('/login', 'LoginController@index');
+Route::get('/signup', 'SignUpController@index');
 
 Route::get('/about', function () {
     return view('about');
-});
-
-Route::get('/profile', function () {
-    return view('profile');
 });

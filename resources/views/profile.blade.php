@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | Open Comissions')
+@section('title', 'Commission-em | Profile')
 @section('main')
 
 
@@ -16,7 +16,7 @@
       <!-- COMISSIONS -->
       <div class="shadow p-3 mb-5 bg-white rounded">
         <h3>Your Comissions</h3>
-        <a class="btn btn-primary" href="/create">Make New Commission</a>
+        <a class="btn btn-primary" href="/comission/create">Make New Commission</a>
          <br /> <br />
 
         <div class="card shadow-sm" style="width: 18rem;">
@@ -24,7 +24,7 @@
           <div class="card-body">
             <h5 class="card-title">Comission Title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Edit</a>  <a href="#" class="btn btn-primary">View</a>
+            <a href="/comission/1/edit" class="btn btn-primary">Edit</a>  <a href="/comission/1" class="btn btn-primary">View</a>
           </div>
         </div> <!--card-->
 
