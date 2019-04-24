@@ -9,7 +9,7 @@
       <img style="height: 200px" class="img-thumbnail" src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
       <h2> Person Name </h2>
       <p>Email: email@email.com </p>
-      <a href="#" class="btn btn-primary">Edit</a>
+      <a href="/profile/1/edit" class="btn btn-primary">Edit</a>
     </div>
 
     <div class="col" >

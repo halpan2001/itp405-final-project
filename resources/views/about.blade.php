@@ -13,9 +13,6 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Make the view commission page (start routing with {id}) - get spaces for the info
-    </li>
-    <li>
       Make edit user info page( route with {id})
     </li>
     <li>
@@ -35,6 +32,12 @@
     </li>
     <li>
       Make database!! Migrations??
+    </li>
+    <li>
+      Make possible for artist to view and edit multiple comissions
+    </li>
+    <li>
+      Badges "tags" for comissions
     </li>
   </ol>
 </div>

@@ -11,7 +11,7 @@ class CommissionController extends Controller
     return view('/home');
   }
 
-  public function index($genreId=null)
+  public function index($commissionId=null)
   {
     return view('commissions.index');
   }
@@ -21,13 +21,8 @@ class CommissionController extends Controller
     return view('commissions.create');
   }
 
-  public function edit($genreId=null)
+  public function edit($commissionId=null)
   {
     return view('commissions.edit');
-  }
-
-  public function profile()
-  {
-    return view('/profile');
   }
 }

@@ -15,7 +15,8 @@ Route::get('/', 'CommissionController@home');
 Route::get('/commission/create', 'CommissionController@create');
 Route::get('/commission/{id}', 'CommissionController@index');
 Route::get('/commission/{id}/edit', 'CommissionController@edit');
-Route::get('/profile', 'CommissionController@profile');
+Route::get('/profile/{id}', 'ProfileController@index');
+Route::get('/profile/{id}/edit', 'ProfileController@edit');
 
 Route::get('/login', 'LoginController@index');
 Route::get('/signup', 'SignUpController@index');

@@ -19,12 +19,17 @@
 
       <div class="form-group">
         <label for="InputCost">Cost</label>
-        <input type="text" class="form-control" id="InputCost"  placeholder="Set your price (Must be numeric)"></input>
+        <input type="text" class="form-control" id="InputCost"  placeholder="Set your price"></input>
+      </div>
+
+      <div class="form-group">
+        <label for="InputCost">Days to Complete</label>
+        <input type="text" class="form-control" id="InputCost"  placeholder="How many days will it take for you to complete the commission once purchased?"></input>
       </div>
 
       <div class="form-group">
         <label for="InputSlot">Slots</label>
-        <input type="text" class="form-control" id="InputSlot"  placeholder="How many comissions of this kind will you take? (Numeric)"></input>
+        <input type="text" class="form-control" id="InputSlot"  placeholder="How many comissions of this kind will you take?"></input>
       </div>
 
       <div class="form-group">

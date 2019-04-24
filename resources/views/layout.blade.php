@@ -9,7 +9,7 @@
 
 <body >
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
     <a class="navbar-brand" href="/">Commission-em</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/profile" tabindex="-1">Profile</a>
+          <a class="nav-link" href="/profile/1" tabindex="-1">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-primary" href="/signup" tabindex="-1">Sign Up</a>
