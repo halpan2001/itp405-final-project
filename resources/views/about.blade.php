@@ -13,7 +13,7 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Make edit user info page( route with {id})
+      Make edit user info page
     </li>
     <li>
       Make the view request page (start routing with {id})
@@ -28,10 +28,24 @@
       Better name
     </li>
     <li>
-      Change state of nav bar depending on if user is logged in or not
-    </li>
-    <li>
-      Make database!! Migrations??
+      Migrations
+      <ul>
+        <li>
+          Comssions Table
+        </li>
+        <li>
+          Image table
+        </li>
+        <li>
+          Comission - Join commission and user
+        </li>
+        <li>
+          Purchase - Join commission and user
+        </li>
+        <li>
+          Join commission and image
+        </li>
+      </ul>
     </li>
     <li>
       Make possible for artist to view and edit multiple comissions

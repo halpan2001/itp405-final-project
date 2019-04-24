@@ -19,38 +19,26 @@
         <li class="nav-item active">
           <a class="nav-link" href="/">Commissions</a>
         </li>
-        <!-- DROPDOWN (Level 2) -->
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories (Level 2)
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Anime</a>
-            <a class="dropdown-item" href="#">Cartoons</a>
-            <a class="dropdown-item" href="#">Indie</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Head</a>
-            <a class="dropdown-item" href="#">Torso</a>
-            <a class="dropdown-item" href="#">Full Body</a>
-            <a class="dropdown-item" href="#">Color</a>
-            <a class="dropdown-item" href="#">No Color</a>
-          </div>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
       </ul>
-
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/profile/1" tabindex="-1">Profile</a>
-        </li>
+        @if (Auth::check())
+          <li class="nav-item">
+            <a class="nav-link" href="/profile" tabindex="-1">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout" tabindex="-1">Logout</a>
+          </li>
+        @else
         <li class="nav-item">
           <a class="nav-link text-primary" href="/signup" tabindex="-1">Sign Up</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-primary" href="/login" tabindex="-1">Login</a>
         </li>
+        @endif
       </ul>
 
     </div>

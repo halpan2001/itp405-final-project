@@ -6,17 +6,18 @@
     <div class="row justify-content-md-center">
       <div class="text-center shadow p-3 mb-5 bg-white rounded w-50 p-5" >
         <h2>Login</h2>
-        <form class="text-left">
+        <form class="text-left" method="post">
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            @csrf
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             <a href="/signup">Forgot Password?</a>
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <input type="submit" class="btn btn-primary" value="Login"></input>
         </form>
         <div class="text-left">
           New to Commission-em? <a href="/signup">Sign Up</a>

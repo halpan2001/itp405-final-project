@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
-  public function index($profileId=null)
+  public function index()
   {
-    return view('profile.index');
+    return view('profile.index',[
+      'user' => Auth::user(),
+    ]);
   }
 
-  public function edit($profileId=null)
+  public function edit()
   {
     return view('profile.edit');
   }
