@@ -20,6 +20,7 @@ Route::get('/profile/{id}/edit', 'ProfileController@edit');
 
 Route::get('/login', 'LoginController@index');
 Route::get('/signup', 'SignUpController@index');
+Route::post('/signup', 'SignUpController@signup');
 
 Route::get('/about', function () {
     return view('about');
