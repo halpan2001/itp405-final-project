@@ -16,8 +16,8 @@ Route::get('/commission/create', 'CommissionController@create');
 Route::post('/commission/create', 'CommissionController@post');
 Route::get('/commission/{id}', 'CommissionController@index');
 Route::get('/commission/{id}/edit', 'CommissionController@edit');
-Route::post('/commission/{id}/edit', 'CommissionController@update');
-Route::delete('/commission/{id}/delete', 'CommissionController@byebye');
+Route::patch('/commission/{id}/edit', 'CommissionController@update');
+Route::delete('/commission/{id}/delete', 'CommissionController@delete');
 
 Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/edit', 'ProfileController@edit');

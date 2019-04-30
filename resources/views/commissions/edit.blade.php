@@ -5,8 +5,9 @@
 <div class="container">
   <div class="text-center shadow p-3 mb-5 bg-white rounded p-5" >
     <h2>Edit Comission</h2>
-    @csrf
-    <form class="text-left" method="post">
+    <form class="text-left" method="post" enctype="multipart/form-data">
+      @csrf
+      @method('PATCH')
       <div class="form-group">
         <label for="title">Title of Your Comission</label>
         <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp" value="{{$commission->title}}">
@@ -23,8 +24,8 @@
       </div>
 
       <div class="form-group">
-        <label for="slot">Slots</label>
-        <input type="text" class="form-control" id="slot" name="slot" value="{{$commission->slots}}"></input>
+        <label for="slots">Slots</label>
+        <input type="text" class="form-control" id="slots" name="slots" value="{{$commission->slots}}"></input>
       </div>
 
       <div class="form-group">

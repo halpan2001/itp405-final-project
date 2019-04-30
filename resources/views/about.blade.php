@@ -16,10 +16,24 @@
       Make edit user info page
     </li>
     <li>
-      Make validation on sign up, commission create and edit pages
+      Validation
+      <ul>
+        <li>
+          Sign up
+        </li>
+        <li>
+          Commission Create
+        </li>
+        <li>
+          Edit Commission
+        </li>
+        <li>
+          Profile edit
+        </li>
+      </ul>
     </li>
     <li>
-      use the user_commission join table properly
+      Purchases table
     </li>
     <li>
       Make the view request page (start routing with {id})

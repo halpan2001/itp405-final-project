@@ -18,26 +18,25 @@ class CommissionController extends Controller
     $commission->description = request('description');
     $commission->price = request('price');
     $commission->slots = request('slots');
-    $commission->paid = True;
+    $commission->paid = False;
     $commission->workTime = request('workTime');
     $commission->artist_id = Auth::id();
 
     //Store image into the folder (if image inputed)
-    $image = $request->file('image');
-    $extension = $image->getClientOriginalExtension();
-    Storage::disk('public')->put($image->getFilename().'.'.$extension,  File::get($image));
+    if (request('image') != null){
+      $image = $request->file('image');
+      $extension = $image->getClientOriginalExtension();
+      Storage::disk('public')->put($image->getFilename().'.'.$extension,  File::get($image));
 
-    $commission->mime = $image->getClientMimeType();
-    $commission->original_filename = $image->getClientOriginalName();
-    $commission->imagename = $image->getFilename().'.'.$extension;
+      $commission->mime = $image->getClientMimeType();
+      $commission->original_filename = $image->getClientOriginalName();
+      $commission->imagename = $image->getFilename().'.'.$extension;
+    }
+
 
     $commission->save();
 
     return redirect('/profile');
-  }
-
-  public function delete($commissionId=null){
-
   }
 
   public function home()
@@ -71,11 +70,43 @@ class CommissionController extends Controller
     ]);
   }
 
-  public function update($commissionId=null){
+  public function update(Request $request, $commissionId=null){
+    $title = request('title');
+    $description = request('description');
+    $price = request('price');
+    $slots = request('slots');
 
+    if (request('image') != null){
+      $image = $request->file('image');
+      $extension = $image->getClientOriginalExtension();
+      Storage::disk('public')->put($image->getFilename().'.'.$extension,  File::get($image));
+
+      $mime = $image->getClientMimeType();
+      $original_filename = $image->getClientOriginalName();
+      $imagename = $image->getFilename().'.'.$extension;
+
+      DB::table('commissions')
+            ->where('id', '=', $commissionId)
+            ->update(['title' => $title,
+                      'description' => $description,
+                      'price' => $price,
+                      'slots'=> $slots,
+                      'mime' => $mime,
+                      'original_filename' => $original_filename,
+                      'imagename' => $imagename]);
+
+      return redirect('/profile');
+
+    }else{
+      DB::table('commissions')
+            ->where('id', '=', $commissionId)
+            ->update(['title' => $title, 'description' => $description, 'price' => $price, 'slots'=> $slots]);
+
+      return redirect('/profile');
+    }
   }
 
-  public function byebye($commissionId=null){
+  public function delete($commissionId=null){
     $query= DB::table('commissions')
       ->where('id', '=', $commissionId);
     $deleted = $query->delete();
