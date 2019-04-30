@@ -21,16 +21,15 @@
 
          @forelse ($commissions as $commission)
         <div class="card shadow-sm" style="width: 18rem;">
-          <img src="http://www.sheprescue.org/images/Maximilian%20von%20Marl7.JPG" class="card-img-top" alt="Dog placeholder">
+          <img src="{{url('uploads/'.$commission->imagename)}}" class="card-img-top" alt="Dog placeholder">
           <div class="card-body">
             <h5 class="card-title">{{$commission->title}}</h5>
             <p class="card-text">{{$commission->description}}</p>
-            <a href="/commission/1/edit" class="btn btn-primary">Edit</a>  <a href="/commission/1" class="btn btn-primary">View</a>
+            <a href="/commission/{{$commission->id}}/edit" class="btn btn-primary">Edit</a>  <a href="/commission/1" class="btn btn-primary">View</a>
           </div>
         </div> <!--card-->
         @empty
         <div>
-          No Commissions!
         </div>
         @endforelse
 

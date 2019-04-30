@@ -10,7 +10,8 @@ class ProfileController extends Controller
 {
   public function index()
   {
-    $cquery = DB::table('commissions');
+    $cquery = DB::table('commissions')
+      ->where('artist_id', '=', Auth::id());
     $commissions = $cquery->get();
 
     return view('profile.index',[

@@ -5,7 +5,7 @@
 <div class="container">
   <div class="text-center shadow p-3 mb-5 bg-white rounded p-5" >
     <h2>Create Commission</h2>
-    <form class="text-left" method="post">
+    <form class="text-left" method="post" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
         <label for="title">Title of Your Commission</label>

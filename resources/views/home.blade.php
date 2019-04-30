@@ -14,7 +14,7 @@
     @forelse ($commissions as $commission)
     <!-- TEST ALL THE CARDS -->
     <div class="card shadow m-2" style="width: 18rem;">
-      <img src="http://www.sheprescue.org/images/Maximilian%20von%20Marl7.JPG" class="card-img-top" alt="Dog placeholder">
+      <img src="{{url('uploads/'.$commission->imagename)}}" class="card-img-top" alt="Dog placeholder">
       <div class="card-body">
         <h5 class="card-title">{{$commission->title}}</h5>
         <p class="card-text">{{$commission->description}}</p>

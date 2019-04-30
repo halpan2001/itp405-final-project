@@ -6,36 +6,41 @@
   <div class="text-center shadow p-3 mb-5 bg-white rounded p-5" >
     <h2>Edit Comission</h2>
     @csrf
-    <form class="text-left">
-
+    <form class="text-left" method="post">
       <div class="form-group">
-        <label for="InputTitle">Title of Your Comission</label>
-        <input type="text" class="form-control" id="InputTitle" aria-describedby="titleHelp" placeholder="Previous Title">
+        <label for="title">Title of Your Comission</label>
+        <input type="text" class="form-control" id="title" name="title" aria-describedby="titleHelp" value="{{$commission->title}}">
       </div>
 
       <div class="form-group">
-        <label for="InputDescription">Description</label>
-        <textarea class="form-control" id="InputDescription" rows="3" placeholder="Previous Description"></textarea>
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3"> {{$commission->description}}</textarea>
       </div>
 
       <div class="form-group">
-        <label for="InputCost">Cost</label>
-        <input type="text" class="form-control" id="InputCost"  placeholder="Previous Price"></input>
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" name="price" value="{{$commission->price}}"></input>
       </div>
 
       <div class="form-group">
-        <label for="InputSlot">Slots</label>
-        <input type="text" class="form-control" id="InputSlot"  placeholder="Previous slots (cannot be fewer than accepted)"></input>
+        <label for="slot">Slots</label>
+        <input type="text" class="form-control" id="slot" name="slot" value="{{$commission->slots}}"></input>
       </div>
 
       <div class="form-group">
-        <label for="InputImage">Image</label><br />
+        <label for="image">Image</label><br />
         <small>Previous image you uploaded, delete?</small>
-        <image src="http://www.sheprescue.org/images/Maximilian%20von%20Marl7.JPG"></image>
-        <input type="file" class="form-control" id="InputImage"></input>
+        <image src="{{url('uploads/'.$commission->imagename)}}"></image>
+        <input type="file" class="form-control" id="image" name="image"></input>
       </div>
 
-      <button type="submit" class="btn btn-primary">Update Comission</button>
+      <input type="submit" class="btn btn-primary" value="Update Comission"></input>
+    </form>
+    <br />
+    <form class="text-left" action="/commission/{{$commission->id}}/delete" method="post">
+      @csrf
+      @method('DELETE')
+      <input type="submit" class="btn btn-danger" value="Delete Commission"></input>
     </form>
   </div>
 </div><!--container -->

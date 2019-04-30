@@ -22,6 +22,9 @@ class CreateCommissionsTable extends Migration
             $table->boolean('paid');
             $table->integer('workTime');
             $table->integer('artist_id');
+            $table->string('imagename')->nullable();
+            $table->string('mime')->nullable();
+            $table->string('original_filename')->nullable();
             $table->timestamps();
         });
     }

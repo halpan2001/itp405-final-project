@@ -16,10 +16,10 @@
       Make edit user info page
     </li>
     <li>
-      use the user_commission join table properly
+      Make validation on sign up, commission create and edit pages
     </li>
     <li>
-      Image table and image storage - DO THE FOLDER STORAGE
+      use the user_commission join table properly
     </li>
     <li>
       Make the view request page (start routing with {id})
@@ -37,10 +37,7 @@
       Migrations
       <ul>
         <li>
-          Image table
-        </li>
-        <li>
-          Join commission and image
+          Update user table to allow for images
         </li>
       </ul>
     </li>
