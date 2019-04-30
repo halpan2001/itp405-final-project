@@ -21,6 +21,7 @@ class CreateCommissionsTable extends Migration
             $table->integer('slots');
             $table->boolean('paid');
             $table->integer('workTime');
+            $table->integer('artist_id');
             $table->timestamps();
         });
     }
