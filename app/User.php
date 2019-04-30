@@ -28,4 +28,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function commissions()
+      {
+      return $this->belongsToMany('App\Commission', 'user_commission', 'user', 'commission');
+      //doesn't follow convention so you define join table name and key names
+      }
+
 }

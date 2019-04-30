@@ -16,6 +16,12 @@
       Make edit user info page
     </li>
     <li>
+      use the user_commission join table properly
+    </li>
+    <li>
+      Image table and image storage - DO THE FOLDER STORAGE
+    </li>
+    <li>
       Make the view request page (start routing with {id})
     </li>
     <li>
@@ -31,27 +37,12 @@
       Migrations
       <ul>
         <li>
-          Comssions Table
-        </li>
-        <li>
           Image table
-        </li>
-        <li>
-          Comission - Join commission and user
-        </li>
-        <li>
-          Purchase - Join commission and user
         </li>
         <li>
           Join commission and image
         </li>
       </ul>
-    </li>
-    <li>
-      Make possible for artist to view and edit multiple comissions
-    </li>
-    <li>
-      Badges "tags" for comissions
     </li>
   </ol>
 </div>

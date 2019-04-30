@@ -5,5 +5,6 @@
 @section('main')
 
 EDIT PROFILE
+@csrf
 
 @endsection

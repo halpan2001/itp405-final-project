@@ -5,6 +5,7 @@
 <div class="container">
   <div class="text-center shadow p-3 mb-5 bg-white rounded p-5" >
     <h2>Edit Comission</h2>
+    @csrf
     <form class="text-left">
 
       <div class="form-group">

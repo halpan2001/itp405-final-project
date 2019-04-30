@@ -13,6 +13,7 @@
 
 Route::get('/', 'CommissionController@home');
 Route::get('/commission/create', 'CommissionController@create');
+Route::post('/commission/create', 'CommissionController@post');
 Route::get('/commission/{id}', 'CommissionController@index');
 Route::get('/commission/{id}/edit', 'CommissionController@edit');
 
