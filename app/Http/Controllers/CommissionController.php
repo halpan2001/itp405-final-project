@@ -77,6 +77,11 @@ class CommissionController extends Controller
     $slots = request('slots');
 
     if (request('image') != null){
+      //Delete old image
+      $commission = DB::table('commissions')->where('id', '=', $commissionId)->first();
+      Storage::disk('public')->delete($commission->imagename);
+
+      //set new image
       $image = $request->file('image');
       $extension = $image->getClientOriginalExtension();
       Storage::disk('public')->put($image->getFilename().'.'.$extension,  File::get($image));

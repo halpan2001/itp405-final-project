@@ -18,7 +18,7 @@
       <div class="card-body">
         <h5 class="card-title">{{$commission->title}}</h5>
         <p class="card-text">{{$commission->description}}</p>
-        <a href="#" class="btn btn-primary">View</a>
+        <a href="commission/{{$commission->id}}" class="btn btn-primary">View</a>
       </div>
     </div> <!--card-->
     @empty

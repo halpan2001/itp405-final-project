@@ -29,7 +29,7 @@ class ProfileController extends Controller
     ]);
   }
 
-  public function update(Request $request){
+  public function update(Request $request, $commissionId = null){
     $user = Auth::user();
 
       $data = $this->validate($request, [
@@ -41,6 +41,10 @@ class ProfileController extends Controller
       $user->email = $data['email'];
 
     if (request('image') != null){
+      //Delete original image
+      Storage::disk('public')->delete($user->profile_photo);
+
+      //create new image
       $image = $request->file('image');
       $extension = $image->getClientOriginalExtension();
       Storage::disk('public')->put($image->getFilename().'.'.$extension,  File::get($image));

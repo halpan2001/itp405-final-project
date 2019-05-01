@@ -13,12 +13,6 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Make edit user info page
-    </li>
-    <li>
-      Automatically delete image from public/uploads folder
-    </li>
-    <li>
       Validation
       <ul>
         <li>
@@ -39,7 +33,7 @@
       Purchases table
     </li>
     <li>
-      Make the view request page (start routing with {id})
+      View request page (start routing with {id}) - DB link
     </li>
     <li>
       Refine preview boxes
@@ -49,14 +43,6 @@
     </li>
     <li>
       Better name
-    </li>
-    <li>
-      Migrations
-      <ul>
-        <li>
-          Update user table to allow for images
-        </li>
-      </ul>
     </li>
   </ol>
 </div>
