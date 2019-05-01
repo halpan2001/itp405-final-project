@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | Profile')
+@section('title', 'Profile')
 @section('main')
 
 
@@ -51,7 +51,7 @@
           @endforelse
       </div>
 
-    </div><!--col-->
+  </div><!--col-->
 
   </div> <!--row-->
 </div><!--container-->

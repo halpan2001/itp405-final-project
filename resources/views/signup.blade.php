@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | Sign Up')
+@section('title', 'Sign Up')
 @section('main')
 <div class="row justify-content-md-center">
   <div class="text-center shadow p-3 mb-5 bg-white rounded w-50 p-5" >

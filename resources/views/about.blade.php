@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | About')
+@section('title', 'About')
 @section('main')
 
 <div class="container">
@@ -13,19 +13,21 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Commission view 
-    </li>
-    <li>
-      Purchases table
-    </li>
-    <li>
-      View request page (start routing with {id}) - DB link
+      Purchases on the artist side
     </li>
     <li>
       Refine preview boxes
     </li>
+  </ol>
+
+
+  <h3> Coming soon... </h3>
+  <ol>
     <li>
-      Add tags to commissions?
+      Multiple images per commission
+    </li>
+    <li>
+      Add tags to commissions
     </li>
     <li>
       Better name

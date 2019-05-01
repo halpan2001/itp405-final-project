@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | Create Comissions')
+@section('title', 'Create Comissions')
 @section('main')
 
 <div class="container">

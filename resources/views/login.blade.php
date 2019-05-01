@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', 'Commission-em | Login')
+@section('title', 'Login')
 @section('main')
 
 
