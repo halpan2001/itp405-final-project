@@ -21,6 +21,7 @@ Route::delete('/commission/{id}/delete', 'CommissionController@delete');
 
 Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/edit', 'ProfileController@edit');
+Route::patch('/profile/edit', 'ProfileController@update');
 
 Route::get('/login', 'LoginController@index');
 Route::post('/login', 'LoginController@login');

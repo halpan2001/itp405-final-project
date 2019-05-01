@@ -16,6 +16,9 @@
       Make edit user info page
     </li>
     <li>
+      Automatically delete image from public/uploads folder
+    </li>
+    <li>
       Validation
       <ul>
         <li>

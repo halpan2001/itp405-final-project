@@ -6,7 +6,7 @@
 <div class="container">
   <div class="row">
     <div class="col col-lg-3" >
-      <img style="height: 200px" class="img-thumbnail" src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"/>
+      <img style="height: 200px" class="img-thumbnail" src="{{url('uploads/'.$user->profile_photo)}}"/>
       <h2> {{$user->name}} </h2>
       <p>Email: {{$user->email}} </p>
       <a href="/profile/edit" class="btn btn-primary">Edit</a>
@@ -38,7 +38,7 @@
       <!-- REQUEST -->
       <div class="shadow p-3 mb-5 bg-white rounded">
         <h3>Your Purchases</h3>
-
+        <!-- LOOP FOR REQUESTS -->
           <div class="card shadow-sm" style="width: 18rem;">
             <img src="http://www.sheprescue.org/images/archie%20von%20arnis4.JPG" class="card-img-top" alt="Dog placeholder">
             <div class="card-body">
@@ -47,6 +47,7 @@
               <a href="#" class="btn btn-primary">View</a>
             </div>
           </div> <!--card-->
+          <!-- END LOOP-->
       </div>
 
     </div><!--col-->
