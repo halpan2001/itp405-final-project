@@ -19,6 +19,10 @@ Route::get('/commission/{id}/edit', 'CommissionController@edit');
 Route::patch('/commission/{id}/edit', 'CommissionController@update');
 Route::delete('/commission/{id}/delete', 'CommissionController@delete');
 
+Route::get('/purchase/{id}', 'PurchaseController@index');
+Route::get('/purchase/{id}/new', 'PurchaseController@new');
+Route::post('/purchase/{id}/new', 'PurchaseController@create');
+
 Route::get('/profile', 'ProfileController@index');
 Route::get('/profile/edit', 'ProfileController@edit');
 Route::patch('/profile/edit', 'ProfileController@update');

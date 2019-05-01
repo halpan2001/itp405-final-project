@@ -13,6 +13,9 @@
   <h3> To Do </h3>
   <ol>
     <li>
+      Commission view 
+    </li>
+    <li>
       Purchases table
     </li>
     <li>

@@ -18,9 +18,15 @@ class ProfileController extends Controller
       ->where('artist_id', '=', Auth::id());
     $commissions = $cquery->get();
 
+    $pquery = DB::table('commissions')
+    ->join('purchases', 'commissions.id', '=', 'purchases.post_id')
+    ->where('user_id', '=', Auth::id());
+    $purchases = $pquery->get(); //gives array of all purchase objects
+
     return view('profile.index',[
       'user' => Auth::user(),
-      'commissions' => $commissions
+      'commissions' => $commissions,
+      'purchases' => $purchases
     ]);
   }
 
@@ -39,7 +45,7 @@ class ProfileController extends Controller
           'required',
           Rule::unique('users')->ignore(Auth::id()),
         ],
-        'image' => 'file|dimensions:max_width=1000,max_height=1000',
+        'image' => 'file|dimensions:max_width=1100,max_height=1100',
       ]);
 
       //if validation fails, redirect back to form with errors

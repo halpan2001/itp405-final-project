@@ -35,7 +35,7 @@
 
       <div class="form-group">
         <label for="image">Image</label><br />
-        <small>Previous image you uploaded, delete?</small>
+        <small>Previous image you uploaded, update?</small>
         <image class="img-thumbnail" src="{{url('uploads/'.$commission->imagename)}}"></image>
         <input type="file" class="form-control" id="image" name="image"></input>
         <small id="image" class="form-text text-danger">{{$errors->first('image')}}</small>

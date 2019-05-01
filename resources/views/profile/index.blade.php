@@ -25,7 +25,7 @@
           <div class="card-body">
             <h5 class="card-title">{{$commission->title}}</h5>
             <p class="card-text">{{$commission->description}}</p>
-            <a href="/commission/{{$commission->id}}/edit" class="btn btn-primary">Edit</a>  <a href="/commission/1" class="btn btn-primary">View</a>
+            <a href="/commission/{{$commission->id}}/edit" class="btn btn-primary">Edit</a>  <a href="/commission/{{$commission->id}}" class="btn btn-primary">View</a>
           </div>
         </div> <!--card-->
         @empty
@@ -38,16 +38,17 @@
       <!-- REQUEST -->
       <div class="shadow p-3 mb-5 bg-white rounded">
         <h3>Your Purchases</h3>
-        <!-- LOOP FOR REQUESTS -->
+        @forelse ($purchases as $purchase)
           <div class="card shadow-sm" style="width: 18rem;">
-            <img src="http://www.sheprescue.org/images/archie%20von%20arnis4.JPG" class="card-img-top" alt="Dog placeholder">
+            <img src="{{url('uploads/'.$purchase->imagename)}}" class="card-img-top" alt="Dog placeholder">
             <div class="card-body">
-              <h5 class="card-title">Request Title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <h5 class="card-title">{{$purchase->title}}</h5>
+              <p class="card-text">{{$purchase->notes}}</p>
+              <a href="/purchase/{{$purchase->post_id}}" class="btn btn-primary">View</a>
             </div>
           </div> <!--card-->
-          <!-- END LOOP-->
+          @empty
+          @endforelse
       </div>
 
     </div><!--col-->

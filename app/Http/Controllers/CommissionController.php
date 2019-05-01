@@ -56,8 +56,7 @@ class CommissionController extends Controller
     return redirect('/profile');
   }
 
-  public function home()
-  {
+  public function home(){
     $cquery = DB::table('commissions');
     $commissions = $cquery->get();
 
@@ -66,18 +65,24 @@ class CommissionController extends Controller
     ]);
   }
 
-  public function index($commissionId=null)
-  {
-    return view('commissions.index');
+  public function index($commissionId=null){
+    $query = DB::table('commissions')->where('id', '=', $commissionId);
+    $commission = $query->first();
+
+    $aquery = DB::table('users')->where('id', '=', $commission->artist_id);
+    $artist = $aquery->first();
+
+    return view('commissions.index',[
+      'commission' => $commission,
+      'artist' => $artist
+    ]);
   }
 
-  public function create()
-  {
+  public function create(){
     return view('commissions.create');
   }
 
-  public function edit($commissionId=null)
-  {
+  public function edit($commissionId=null){
     $cquery = DB::table('commissions')
       ->where('id', '=', $commissionId);
     $commission = $cquery->first();
