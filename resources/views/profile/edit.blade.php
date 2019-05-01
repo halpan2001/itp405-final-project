@@ -12,11 +12,15 @@
       @method('PATCH')
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" value="{{$profile->name}}">
+        <input type="text" class="form-control" id="name" name="name"
+        value="{{ old('name') != null ? old('name'): $profile->title}}">
+        <small id="name" class="form-text text-danger">{{$errors->first('name')}}</small>
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" value="{{$profile->email}}">
+        <input type="email" class="form-control" id="email" name="email"
+        value="{{ old('email') != null ? old('email'): $profile->email}}">
+        <small id="name" class="form-text text-danger">{{$errors->first('email')}}</small>
       </div>
       <div class="form-group">
         <label for="image">Image</label><br />

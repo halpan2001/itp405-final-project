@@ -6,12 +6,29 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use App\Commission;
+use Validator;
 use DB;
 use Auth;
 
 class CommissionController extends Controller
 {
   public function post(Request $request){
+    $input = $request->all();
+    $validation = Validator::make($input, [
+        'title' => 'required',
+        'description' => 'required|min:5',
+        'price' => 'required|numeric',
+        'workTime' => 'required|numeric',
+        'slots' => 'required|numeric',
+        'image' => 'required|file|dimensions:max_width=1000,max_height=1000',
+      ]);
+
+      //if validation fails, redirect back to form with errors
+      if($validation->fails()){
+        return redirect('/commission/create')
+          ->withInput() //returns the previous inputs so you can use them
+          ->withErrors($validation);
+      }
 
     $commission = new Commission();
     $commission->title = request('title');
@@ -71,6 +88,22 @@ class CommissionController extends Controller
   }
 
   public function update(Request $request, $commissionId=null){
+    $input = $request->all();
+    $validation = Validator::make($input, [
+        'title' => 'required',
+        'description' => 'required|min:5',
+        'price' => 'required|numeric',
+        'slots' => 'required|numeric',
+        'image' => 'file|dimensions:max_width=1000,max_height=1000',
+      ]);
+
+      //if validation fails, redirect back to form with errors
+      if($validation->fails()){
+        return redirect('/commission/'. $commissionId.'/edit')
+          ->withInput() //returns the previous inputs so you can use them
+          ->withErrors($validation);
+      }
+
     $title = request('title');
     $description = request('description');
     $price = request('price');

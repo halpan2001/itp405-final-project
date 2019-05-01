@@ -8,11 +8,15 @@
       @csrf
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+        <input type="text" class="form-control" id="name" name="name"
+        placeholder="Enter name" value="{{ old('name') != null ? old('name'): ''}}">
+        <small id="name" class="form-text text-danger">{{$errors->first('name')}}</small>
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        <input type="email" class="form-control" id="email" name="email"
+        placeholder="Enter email" value="{{ old('email') != null ? old('email'): ''}}">
+        <small id="name" class="form-text text-danger">{{$errors->first('email')}}</small>
       </div>
       <div class="form-group">
         <label for="profile">Profile Photo (optional)</label><br />

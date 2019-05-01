@@ -13,23 +13,6 @@
   <h3> To Do </h3>
   <ol>
     <li>
-      Validation
-      <ul>
-        <li>
-          Sign up
-        </li>
-        <li>
-          Commission Create
-        </li>
-        <li>
-          Edit Commission
-        </li>
-        <li>
-          Profile edit
-        </li>
-      </ul>
-    </li>
-    <li>
       Purchases table
     </li>
     <li>
