@@ -13,14 +13,19 @@
           <div class="mb-4">
             <h5 class="card-text">Price: ${{$commission->price}} <span class="badge badge-success">Paid {{$commission->paid}}</span></h5>
           </div>
-          <div class="mb-4">
-            <h5 class="card-text">Artist</h5>
-            <a href="/profile" class="card-text"> {{$artist->name}}</a>
-          </div>
           <h5 class="card-text">Time to complete once purchased</h5>
           <p class="card-text"> {{$commission->workTime}} Days</p>
           @if (Auth::check())
             @if(Auth::id() == $commission->artist_id)
+            <div class="mb-4">
+              <h5 class="card-text">Requests</h5>
+              <!-- LOOP FOR REQUESTS-->
+              @forelse($customers as $customer)
+              <a href="/purchase/{{$customer->id}}/view" class="card-text"> {{$customer->name}}</a> |
+              @empty
+              No requests
+              @endforelse
+            </div>
             @else
             <a href="/purchase/{{$commission->id}}/new" class="btn btn-primary">Commission</a>
             @endif

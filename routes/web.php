@@ -21,6 +21,7 @@ Route::delete('/commission/{id}/delete', 'CommissionController@delete');
 
 Route::get('/purchase/{id}', 'PurchaseController@index');
 Route::get('/purchase/{id}/new', 'PurchaseController@new');
+Route::get('/purchase/{id}/view', 'PurchaseController@view');
 Route::post('/purchase/{id}/new', 'PurchaseController@create');
 
 Route::get('/profile', 'ProfileController@index');

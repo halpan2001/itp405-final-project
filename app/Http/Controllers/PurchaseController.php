@@ -10,21 +10,44 @@ use Auth;
 
 class PurchaseController extends Controller
 {
-    public function index($commissionId = null){
+    public function index($purchaseId = null){
       $query = DB::table('purchases')
-      ->join('commissions', 'purchases.post_id', '=', 'commissions.id')
-      ->where('post_id', '=', $commissionId);
+      ->where('id', '=', $purchaseId);
       $purchase =  $query->first();
 
+      $cquery = DB::table('commissions')
+      ->where('id', '=', $purchase->post_id);
+      $commission = $cquery->first();
+
       $aquery = DB::table('users')
-      ->where('id', '=', $purchase->artist_id);
+      ->where('id', '=', $commission->artist_id);
       $artist = $aquery->first();
 
       return view('purchase.index', [
         'purchase' => $purchase,
+        'commission'=> $commission,
         'artist' => $artist
       ]);
     }
+
+    public function view($purchaseId = null){
+      $query = DB::table('purchases')
+      ->where('id', '=', $purchaseId);
+      $purchase =  $query->first();
+
+      $cquery = DB::table('commissions')
+      ->where('id', '=', $purchase->post_id);
+      $commission = $cquery->first();
+
+      $customer = DB::table('users')->where('id', '=', $purchase->user_id)->first();
+
+      return view('purchase.view', [
+        'purchase' => $purchase,
+        'commission' => $commission,
+        'customer' => $customer
+      ]);
+    }
+
     public function new($commissionId = null){
       $query = DB::table('commissions')->where('id', '=', $commissionId);
       $commission =  $query->first();

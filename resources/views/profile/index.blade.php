@@ -44,7 +44,7 @@
             <div class="card-body">
               <h5 class="card-title">{{$purchase->title}}</h5>
               <p class="card-text">{{$purchase->notes}}</p>
-              <a href="/purchase/{{$purchase->post_id}}" class="btn btn-primary">View</a>
+              <a href="/purchase/{{$purchase->id}}" class="btn btn-primary">View</a>
             </div>
           </div> <!--card-->
           @empty

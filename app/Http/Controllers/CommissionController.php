@@ -72,9 +72,15 @@ class CommissionController extends Controller
     $aquery = DB::table('users')->where('id', '=', $commission->artist_id);
     $artist = $aquery->first();
 
+    $cquery = DB::table('users')
+    ->join('purchases', 'users.id', '=', 'purchases.user_id')
+    ->where('post_id', '=', $commissionId);
+    $customers = $cquery->get();
+
     return view('commissions.index',[
       'commission' => $commission,
-      'artist' => $artist
+      'artist' => $artist,
+      'customers' => $customers
     ]);
   }
 
